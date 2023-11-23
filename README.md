@@ -14,3 +14,7 @@ First Svelte app. I had a lot of fun with this. I'm looking forward to learning 
 
 `npm run build`
 `npm run start`
+
+## Test
+
+`npm run test`

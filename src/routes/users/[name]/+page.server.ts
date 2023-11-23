@@ -23,10 +23,16 @@ export const actions = {
 
 		const username = formData.username as string;
 
-		if (!file?.name || file.name === 'undefined') {
+		if (!file?.name || file.name === 'undefined' || !file.name.includes('.csv')) {
 			return fail(400, {
 				error: true,
 				message: 'You must provide a file to upload'
+			});
+		}
+		if (!file.name.includes('.csv')) {
+			return fail(400, {
+				error: true,
+				message: 'Wrong file type'
 			});
 		}
 
